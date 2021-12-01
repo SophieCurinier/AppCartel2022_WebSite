@@ -25,9 +25,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src=ecoles.js></script>
+    <script>new Vue({
+        el: '#liste_ecoles',
+        data() {
+            return {
+                info: null
+            }
+        },
+        mounted() {
+            axios
+                .get('https://cartel2022.cleverapps.io/api/ecole')
+                .then(response => (this.info = response.data.bpi))
+        }
+    })</script>
     <div id="liste_ecoles">
-        {{ info }}
+        <div v-for="ecole in date" class="ecole">
+            {{ ecole }}:
+            <span class="lighten">
+                <span></span>{{ ecole.name}}
+            </span>
+        </div>
     </div>
 
 
