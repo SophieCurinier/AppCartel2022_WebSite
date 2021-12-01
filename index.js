@@ -5,7 +5,7 @@ var app = new Vue({
     }
   })
 
-//app.message="shit"
+
 
 var app2 = new Vue({
     el: '#app-2',
@@ -21,4 +21,4 @@ var app2 = new Vue({
     }
   })  
 
-  app3.seen = false
+  
