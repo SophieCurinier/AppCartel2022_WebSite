@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
 }
@@ -9,6 +10,7 @@ body {
     font-family: Roboto;
     position:fixed;
     width: 100%;
+
 }
 
 /* Style the links inside the navigation bar */
@@ -29,7 +31,9 @@ body {
 
 /* Add a color to the active/current link */
 .topnav a.active {
+
   background-color: #3A393E;
+
   color: white;
 }
 
@@ -43,7 +47,9 @@ ul{
 }
 
 li{
+
     background-color: #426442;
+
     display: inline-block;
 }
 
@@ -62,6 +68,7 @@ li a:hover {
   }
 
 li a.active{
+
     background-color:#3A393E;
     color: white;
 }
@@ -73,4 +80,5 @@ img{
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+
 }
