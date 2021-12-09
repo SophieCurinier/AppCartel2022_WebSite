@@ -7,7 +7,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('http://localhost:8080/api/ecole')
+            .get('http://cartel2022.cleverapps.io:80/api/ecole')
             .then(response => (this.info = response.data.bpi))
     }
 })
