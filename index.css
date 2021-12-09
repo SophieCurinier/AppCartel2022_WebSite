@@ -5,9 +5,10 @@ body {
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #426442;
-    overflow: hidden;
+    overflow: auto;
     font-family: Roboto;
-    
+    position:fixed;
+    width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -63,4 +64,13 @@ li a:hover {
 li a.active{
     background-color:#3A393E;
     color: white;
+}
+
+img{
+  max-width: 100vh;
+  max-height: 100vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
