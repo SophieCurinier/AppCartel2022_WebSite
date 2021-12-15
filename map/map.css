@@ -1,0 +1,51 @@
+/* Set the size of the div element that contains the map */
+#map {
+  height: 800px;
+  width: 800px;
+  margin:auto;
+  margin-top: 50px;
+}
+
+body {
+  margin: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #426442;
+  overflow: auto;
+  font-family: Roboto;
+  position: fixed;
+  width: 100%;
+  top:0px;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+
+  background-color: #3A393E;
+
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
