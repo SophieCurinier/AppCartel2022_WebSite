@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   background: linear-gradient( white 30%,#333 50%, rgb(26, 25, 25) 90%);
@@ -239,4 +240,87 @@ img{
   margin: auto;
   width: 50%;
   height:50%;
+=======
+
+body {
+  margin: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #426442;
+    overflow: auto;
+    font-family: Roboto;
+    position:fixed;
+    width: 100%;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+
+  background-color: #3A393E;
+
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+ul{
+    text-align: center;
+}
+
+li{
+
+    background-color: #426442;
+
+    display: inline-block;
+}
+
+li a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+li a.active{
+
+    background-color:#3A393E;
+    color: white;
+}
+
+img{
+  max-width: 100vh;
+  max-height: 100vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
