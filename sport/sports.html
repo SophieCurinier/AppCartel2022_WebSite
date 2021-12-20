@@ -4,29 +4,83 @@
 
 <html>
 
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
 <head>
-    <title>Cartel</title>
-    <link href="sports.css" rel="stylesheet">
+  <title>Cartel</title>
+  <link href="sports.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="topnav">
-        <a href="../index/index.html">Accueil</a>
-        <a class="active" href="../sport/sports.html">Sports</a>
-        <a href="../school/school.html">Ecoles</a>
-        <a href="../planning/planning.html">Planning</a>
-        <a href="../partner/partner.html">Partenaires</a>
-        <a href="../map/map.html">Carte</a>
-        <div class="topnav-right">
-    
-          <a href="../login/login.html">Login</a>
-        </div>
-      </div>
+  <div class="topnav">
+    <a href="../index/index.html">Accueil</a>
+    <a class="active" href="../sport/sports.html">Sports</a>
+    <a href="../school/school.html">Ecoles</a>
+    <a href="../planning/planning.html">Planning</a>
+    <a href="../partner/partner.html">Partenaires</a>
+    <a href="../map/map.html">Carte</a>
+    <div class="topnav-right">
 
+      <a href="../login/login.html">Login</a>
+    </div>
+  </div>
 
-    
+  <br><br><br><br>
 
+  <div id="app">
+    <ul id="app">
+      <li v-for="sport in message">
+        <a href="#" @click="getSportInfo(sport.name)">{{ sport.name }}</a>
+      </li>
+    </ul>
+    <br><br><br><br>
+    <div id="app">
+      <table id="app">
+        <thead>
+          <tr>
+            <th colspan="2">Liste des matchs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="match in sportInfo">
+            <td>{{ match.date }}</td>
+            <td>{{ match.team1 }}</td>
+            <td>{{ match.score_1 }} - {{match.score_2}}</td>
+            <td>{{ match.team2 }}</td>
+            <td>{{ match.sport }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    var myObject = new Vue({
+      el: '#app',
+      data: {
+        sportInfo: {
+        },
+        message: 'Hello Vue!'
+      },
+
+      mounted() {
+        axios
+          .get('https://cartel2022.cleverapps.io:443/api/sport')
+          .then(response => (this.message = response.data))
+        this.getSportInfo('FOOTBALL%20M')
+      },
+      methods: {
+        getSportInfo(name) {
+          axios
+            .get('https://cartel2022.cleverapps.io:443/api/match/sport/' + name)
+            .then(response => (this.sportInfo = response.data))
+          return this.sportInfo
+        }
+      }
+    })
+  </script>
 
 </body>
 
