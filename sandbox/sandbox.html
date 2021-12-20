@@ -7,20 +7,17 @@
 <div id="app">
     
     <h1>{{ message }}</h1>
+    <h2>{{message.name}}</h2>
     
 </div>
 
 <script>
    var myObject = new Vue({
     el: '#app',
-    data: {message: 'Hello Vue!'},
-
-
-
-       
+    data: {message: 'Hello Vue!'},    
     mounted () {
         axios
-        .get('http://cartel2022.cleverapps.io:80/api/ecole')
+        .get('http://cartel2022.cleverapps.io:80/api/ecole/1')
         .then(response => (this.message = response.data))
     }
     })
