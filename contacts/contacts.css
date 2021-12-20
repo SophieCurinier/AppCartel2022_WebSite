@@ -1,0 +1,125 @@
+
+html{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+/* || NAV BAR */
+/* Add a kaki background color to the top navigation */
+.topnav {
+    background-color: #426442;
+    overflow: auto;
+    position:sticky;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    width: 100%;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.75em 0.75em;
+  text-decoration: none;
+  font-size: 1em;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #1b1a1d;
+  color: white;
+}
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+li{
+    background-color: #426442;
+    display: inline-block;
+}
+
+li a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+li a.active{
+    background-color:#1b1a1d;
+    color: white;
+}
+
+
+
+
+/*Position buttons top page*/
+button.rightButton{
+    position: absolute;
+    left: 50px;
+}
+
+button.leftButton{
+    position: absolute;
+    right: 50px;
+}
+
+/*Design Infos Contacts*/
+div.numero{
+    background-color: #426442;
+    color: white;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+div.InfosContact{
+    display: inline-block;
+    border: 2px solid #426442;
+    width: 8cm;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div.InfosContactRight{
+    display: inline-block;
+    border: 2px solid #426442;
+    width: 8cm;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    left: 25px;
+}
+div.InfosContactLeft{
+    display: inline-block;
+    border: 2px solid #426442;
+    width: 8cm;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    right: 25px;
+}
+
+p.Poste{
+    font-weight: bold;
+}
+
+p.Nom{
+    font-weight: bolder;
+}
