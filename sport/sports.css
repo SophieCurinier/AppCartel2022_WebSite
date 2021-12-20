@@ -1,46 +1,37 @@
-
+/* || GENERAL STYLES */
 body {
   margin: 0;
+  font-family: Verdana;
 }
 
-/* Add a black background color to the top navigation */
+/* || NAVIGATION BAR */
+/* Add a kaki background color to the top navigation */
 .topnav {
-    background-color: #426442;
-    overflow: auto;
-    font-family: Roboto;
-    position:fixed;
-    width: 100%;
-
-}
-
+  background-color: #426442;
+  overflow: auto;
+  position:sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  width: 100%; }
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 0.75em 0.75em;
+text-decoration: none;
+font-size: 1em; }
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
+background-color: #ddd;
+color: black; }
 /* Add a color to the active/current link */
 .topnav a.active {
-
-  background-color: #3A393E;
-
-  color: white;
-}
-
+background-color: #1b1a1d;
+color: white; }
 /* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
-}
+.topnav-right { float: right; }
 
 ul{
     text-align: center;

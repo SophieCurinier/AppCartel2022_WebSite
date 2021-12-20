@@ -44,7 +44,7 @@ ul{ text-align: center; }
 /* Set the size of the div element that contains the map */
 #map {
   height:93vh;
-  aspect-ratio: 9/16;
+  weight:100vw;
   margin:auto;
   padding:0 0;
   }
