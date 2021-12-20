@@ -5,41 +5,45 @@
   <title>
     Cartel</title>
   <link href="index.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../ressources/CARTEL_Logo.png">
   <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body>
   <div class="topnav">
-    <a class="active" href="home.html">Accueil</a>
-    <a class="active" href="sports.html">Sports</a>
-    <a class="active" href="ecoles.html">Ecoles</a>
-    <a href="planning.html">Planning</a>
+    <a class="active" href="index/index.html">Accueil</a>
+    <a href="../sport/sports.html">Sports</a>
+    <a href="../ecole/ecoles.html">Ecoles</a>
+    <a href="../planning/planning.html">Planning</a>
     <div class="topnav-right">
-      <a href="login.html">Connexion</a>
+      <a href="../login/login.html">Connexion</a>
     </div>
   </div>
 
-    <img src="ressources/CARTEL_Logo.png" alt="Cartel Logo">
+    <img src="../ressources/CARTEL_Logo.png" alt="Cartel Logo">
 
-    <div class="presentation">
-        <div class="description_wrapper">
-          <div class="description_img"><img src="ressources/Cartel_presentation.jpg" class="img_test"></div>
-          <div class="description_txt"><p class="p_test">Le Cartel est un évènement incontournable ayant lieu
-            chaque année sur un week-end prolongé de 4 jours. Près
-            de 2000 étudiants issus des prestigieuses écoles de l’IMT
-            (Institut Mines Telecom) s’affrontent dans différentes
-            disciplines sportives.</p></div>
+    <div class="container">
+      <div class="description_wrapper">
+        <div class="description_img">
+          <img src="../ressources/Cartel_presentation.jpg" class="img_test">
         </div>
+        <div class="description_txt">
+          <div class="center">
+            <div class="p_test">Le Cartel est un évènement incontournable ayant lieu
+            chaque année sur un week-end prolongé de 4 jours. Près de 2000 étudiants issus des prestigieuses
+            écoles de l’IMT (Institut Mines Telecom) s’affrontent dans différentes disciplines sportives.
+            </div>
+            <div class="p_test">Depuis 1962, le Cartel annime l'année des ingénieurs des Mines. Il débute par un défilé au cœur de la ville,
+            et se poursuit avec de nombreuses animations en journée et en soirée où les festivités seront à l’honneur. Des concours de danse,
+            de DJs ou encore de pom-pom girl rythment ces nuits mémorables. 
+            Cette grande célébration du sport et de ses valeurs se clôture par une remise de prix et l'annonce de la prochaine déléguation organisatrice de l'évèenemnt.
+            </div>
+          </div>  
+        </div>
+      </div>
     </div>
 
-    <div class="presentation">
-      <div class="center">      
-        <iframe width="852" height="480'" src="https://www.youtube.com/embed/wRyIInWDC60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-
-
-  <div class="presentation">
+  <div class="container">
     <div class="wrapper">
       <div class="keyNumber_keyOne">1,800+</div>
       <div class="keyNumber_keyOneDescript">Participants</div>
@@ -54,10 +58,33 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="sport_wrapper">
+      <div class="sport_txt">
+        <div class="p_test">Durant l’évènement, votre délégation concourra dans 12 sports communs à toutes les éditions 
+          (Football, Rugby, Basket, Handball, Volley, Tennis, Tennis de Table, Badminton, Escalade, Cross, Relais Athlétisme, Relais Natation),
+          et dans deux sports invités spécifiques à cette édition du Cartel, que vous découvrirez bientôt…
+        </div>
+      </div>
+      <div class="sport_img">
+        <img class="mySlides" src="../ressources/index/footbal.jpg">
+        <img class="mySlides" src="../ressources/index/basketball.jpg">
+        <img class="mySlides" src="../ressources/index/rugby.jpg">
+        <img class="mySlides" src="../ressources/index/escalade.jpg">
+        <img class="mySlides" src="../ressources/index/vtt.jpg">
+      </div>
+      <div class="sport_h">Sports</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footerContainer">
+        <p>© 2021 - CARTEL DES MINES DE SAINT-ÉTIENNE, ASSOCIATION LOI 1901 - TOUS DROITS RÉSERVÉS</p>
+    </div>
+</footer>
 
 
-
-
+  <script src="index.js"></script>
 </body>
 
 </html>
