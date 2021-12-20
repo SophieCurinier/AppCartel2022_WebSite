@@ -1,6 +1,7 @@
 
 html{
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*Position buttons top page*/
@@ -14,7 +15,7 @@ button.leftButton{
     right: 50px;
 }
 
-/*Designe Infos Contacts*/
+/*Design Infos Contacts*/
 div.numero{
     background-color: green;
     padding: 5px;
