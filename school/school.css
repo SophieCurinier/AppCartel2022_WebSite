@@ -46,6 +46,7 @@ ul{
     text-align: center;
 }
 
+
 li{
 
     background-color: #426442;
@@ -71,4 +72,9 @@ li a.active{
 
     background-color:#3A393E;
     color: white;
+} */
+
+#app{
+  margin-top: 50px;
+
 }
