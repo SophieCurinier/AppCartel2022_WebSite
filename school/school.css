@@ -1,7 +1,7 @@
-
+/* || GENERAL STYLES */
 body {
   margin: 0;
-  font-family:Verdana;
+  font-family: Verdana;
 }
 
 /* || NAVIGATION BAR */
@@ -37,7 +37,6 @@ ul{
     text-align: center;
 }
 
-
 li{
 
     background-color: #426442;
@@ -63,9 +62,46 @@ li a.active{
 
     background-color:#3A393E;
     color: white;
-} */
+}
 
-#app{
-  margin-top: 50px;
+img{
+  max-width: 100vh;
+  max-height: 100vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #426442;
+  color: #ffffff;
+  text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #426442;
 }

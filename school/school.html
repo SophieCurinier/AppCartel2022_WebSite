@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<meta charset="UTF-8">
+
 <html>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -29,7 +32,7 @@
     </ul>
     <br><br><br><br>
     <div id="app">
-      <table id="app">
+      <table id="app" class="styled-table">
         <thead>
           <tr>
             <th colspan="2">Liste des matchs</th>
@@ -37,11 +40,11 @@
         </thead>
         <tbody>
           <tr v-for="match in schoolInfo">
-            <td >{{ match.date }}</td>
-            <td >{{ match.team1 }}</td>
-            <td >{{ match.score_1 }} - {{match.score_2}}</td>
-            <td >{{ match.team2 }}</td>
-            <td >{{ match.sport }}</td>
+            <td>{{ match.date }}</td>
+            <td>{{ match.team1 }}</td>
+            <td>{{ match.score_1 }} - {{match.score_2}}</td>
+            <td>{{ match.team2 }}</td>
+            <td>{{ match.sport }}</td>
           </tr>
         </tbody>
       </table>
