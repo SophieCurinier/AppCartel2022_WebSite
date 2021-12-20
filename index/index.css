@@ -6,9 +6,7 @@ body {
   font-family: Verdana;
 }
 /* List */
-ul{
-  text-align: center;
-}
+ul{ text-align: center; }
 
 /* || NAV BAR */
 /* Add a kaki background color to the top navigation */
@@ -302,7 +300,8 @@ img{
     grid-column-start:1;
     grid-column-end:2;
     grid-row-start:1;
-    grid-row-end: 3; }
+    grid-row-end: 3;
+    margin-top:2vw; }
   .planning_txt{
     grid-column-start: 2;
     grid-column-end: 3;
@@ -325,14 +324,5 @@ img{
   width: 48vw; /*image width*/
   margin:0%;
   float:right;}
-
-footer.footer {
-  padding-top: 0.15vw;
-  padding-bottom: 0.15vw;
-  width: 100%;
-  background-color: #426442;
-  bottom:0px;
-  text-align: center;
-  opacity: 0.5; }
 
 
