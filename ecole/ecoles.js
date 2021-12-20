@@ -2,7 +2,7 @@ new Vue({
     el: '#liste_ecoles',
     data() {
         return {
-            info: null
+            info: "No info here"
         }
     },
     mounted() {
