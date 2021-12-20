@@ -22,25 +22,42 @@
       <a href="../login/login.html">Login</a>
     </div>
   </div>
+  <br><br><br><br>
 
   <div id="app">
-
-    <h1>{{ message }}</h1>
-
+    <ul id="app">
+      <li v-for="school in message">
+        <a href="#" @click="getSchoolInfo(school.name)">{{ school.name }}</a>
+      </li>
+    </ul>
+    <div>
+      <p> {{ schoolInfo }} </p>
+    </div>
   </div>
 
   <script>
     var myObject = new Vue({
       el: '#app',
-      data: { message: 'Hello Vue!' },
-
-
-
+      data: {
+        schoolInfo: {
+          id: 1,
+          name: "EMSE"
+        },
+        message: 'Hello Vue!'
+      },
 
       mounted() {
         axios
           .get('http://cartel2022.cleverapps.io:80/api/ecole')
           .then(response => (this.message = response.data))
+      },
+      methods: {
+        getSchoolInfo(name) {
+          axios
+            .get('https://cartel2022.cleverapps.io:443/api/match/ecole/' + name)
+            .then(response => (this.schoolInfo = response.data))
+          return this.schoolInfo
+        }
       }
     })
   </script>
