@@ -27,8 +27,24 @@
         <a href="#" @click="getSchoolInfo(school.name)">{{ school.name }}</a>
       </li>
     </ul>
-    <div>
-      <p> {{ schoolInfo }} </p>
+    <br><br><br><br>
+    <div id="app">
+      <table id="app">
+        <thead>
+          <tr>
+            <th colspan="2">Liste des matchs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="match in schoolInfo">
+            <td >{{ match.date }}</td>
+            <td >{{ match.team1 }}</td>
+            <td >{{ match.score_1 }} - {{match.score_2}}</td>
+            <td >{{ match.team2 }}</td>
+            <td >{{ match.sport }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
@@ -38,7 +54,7 @@
       data: {
         schoolInfo: {
           id: 1,
-          name: "EMSE"
+          name: 'EMSE'
         },
         message: 'Hello Vue!'
       },
@@ -47,6 +63,7 @@
         axios
           .get('http://cartel2022.cleverapps.io:80/api/ecole')
           .then(response => (this.message = response.data))
+        this.getSchoolInfo('EMSE')
       },
       methods: {
         getSchoolInfo(name) {
