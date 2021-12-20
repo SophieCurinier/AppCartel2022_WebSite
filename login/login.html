@@ -4,32 +4,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="login.css">
 </head>
-<body>
+  <body>
+    <div class="topnav">
+      <a href="../index/index.html">Accueil</a>
+      <a href="../sport/sports.html">Sports</a>
+      <a href="../ecole/ecoles.html">Ecoles</a>
+      <a href="../planning/planning.html">Planning</a>
+      <div class="topnav-right">
+        <a class="active" href="login.html">Connexion</a>
+      </div>
+    </div>
 
-<h2>Login Form</h2>
+    <div class="container">
+      <div class="imgcontainer">
+        <img src="../ressources/CARTEL_Logo.png" alt="Avatar" class="avatar">
+      </div>
+      <label for="uname"><b>Nom d'utilisateur</b></label>
+      <input type="text" placeholder="Entrer nom d'utilisateur" name="uname" required>
 
-<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+      <label for="psw"><b>Mot de passe</b></label>
+      <input type="password" placeholder="Entrer mot de passe" name="psw" required>
+          
+      <button type="submit">Connexion</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
+      </label>
+    </div>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <footer class="footer">
+      <div class="footerContainer">
+          <p>© 2021 - CARTEL DES MINES DE SAINT-ÉTIENNE, ASSOCIATION LOI 1901 - TOUS DROITS RÉSERVÉS</p>
+      </div>
+    </footer>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-  </div>
-</form>
-
-</body>
+  </body>
 </html>

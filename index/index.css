@@ -2,7 +2,7 @@
 /* || GENERAL STYLES */
 body {
   margin: 0;
-  background: linear-gradient( white 30%,#333 50%, rgb(26, 25, 25) 90%);
+  background: linear-gradient( white 10%, rgb(46, 44, 44) 40%, rgb(26, 25, 25) 70%);
   font-family: Verdana;
 }
 /* List */
@@ -126,18 +126,15 @@ img{
 .description_wrapper {
   display: grid;
   grid-template-columns: repeat(2);
-  grid-auto-columns: 50%;
-}
+  grid-auto-columns: 50%; }
 .description_img{
   grid-column-start:1;
   grid-column-end:2;
-  grid-row:1;
-}
+  grid-row:1; }
 .description_txt{
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row:1;
-}
+  grid-row:1; }
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -237,8 +234,7 @@ img{
   font:bold;
   border:0.4vw solid white;
   font-size: 1.8em;
-  line-height: 0.3em;
-}
+  line-height: 0.3em; }
 .keyNumber_topRow{
   grid-column-start: 2;
   grid-column-end: 6;
@@ -246,8 +242,7 @@ img{
   grid-row-end: 2;
   vertical-align: center;
   margin:1vw;
-  padding:0.5vw;
-}
+  padding:0.5vw; }
 .center {
   vertical-align:middle; }
 
@@ -284,7 +279,7 @@ img{
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row:2; }
-.sport_h2{
+.sport_h{
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row:1; 
@@ -293,24 +288,37 @@ img{
   text-align: left;
   font:bold;
   border:0.4vw solid white;
-  font-size: 1.8em;
   text-transform: uppercase;
   height:auto;
-  background-color:blue; }
+  font-size: 1.8em; }
 
-.sport_h{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row:1; 
-  /* margin:2vw;
-  padding:1vw;
-  text-align: left;
-  font:bold;
-  border:0.4vw solid white;
-  text-transform: uppercase; */
-  height:auto;
-  background-color:blue; 
-}
+  .planning_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    grid-auto-columns: 50%;
+    grid-auto-rows: min-content; }
+  .planning_img{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:1;
+    grid-row-end: 3; }
+  .planning_txt{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row:2; }
+  .planning_h{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row:1; 
+    margin:2vw;
+    padding:1vw;
+    text-align: left;
+    font:bold;
+    border:0.4vw solid white;
+    text-transform: uppercase;
+    height:auto;
+    font-size: 1.8em; }
 
 .mySlides {
   display:none;
@@ -319,7 +327,8 @@ img{
   float:right;}
 
 footer.footer {
-  height: 30px;
+  padding-top: 0.15vw;
+  padding-bottom: 0.15vw;
   width: 100%;
   background-color: #426442;
   bottom:0px;
