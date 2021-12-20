@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<head>
+  <title>Cartel</title>
+  <link href="school.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="../index/index.html">Accueil</a>
+    <a href="../sport/sports.html">Sports</a>
+    <a class="active" href="../school/school.html">Ecoles</a>
+    <a href="../planning/planning.html">Planning</a>
+    <a href="../partner/partner.html">Partenaires</a>
+    <a href="../map/map.html">Carte</a>
+
+    <div class="topnav-right">
+
+      <a href="../login/login.html">Login</a>
+    </div>
+  </div>
+
+  <div id="app">
+
+    <h1>{{ message }}</h1>
+
+  </div>
+
+  <script>
+    var myObject = new Vue({
+      el: '#app',
+      data: { message: 'Hello Vue!' },
+
+
+
+
+      mounted() {
+        axios
+          .get('http://cartel2022.cleverapps.io:80/api/ecole')
+          .then(response => (this.message = response.data))
+      }
+    })
+  </script>
+
+
+</body>
+
+</html>
