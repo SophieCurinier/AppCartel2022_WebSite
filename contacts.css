@@ -3,7 +3,7 @@ html{
     text-align: center;
 }
 
-
+/*Position buttons top page*/
 button.rightButton{
     position: absolute;
     left: 50px;
@@ -14,6 +14,7 @@ button.leftButton{
     right: 50px;
 }
 
+/*Designe Infos Contacts*/
 div.numero{
     background-color: green;
     padding: 5px;
@@ -28,6 +29,24 @@ div.InfosContact{
     padding-left: 10px;
     padding-right: 10px;
 }
+div.InfosContactRight{
+    display: inline-block;
+    border: 2px solid green;
+    width: 8cm;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    left: 25px;
+}
+div.InfosContactLeft{
+    display: inline-block;
+    border: 2px solid green;
+    width: 8cm;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    right: 25px;
+}
 
 p.Poste{
     font-weight: bold;
@@ -35,14 +54,4 @@ p.Poste{
 
 p.Nom{
     font-weight: bolder;
-}
-
-div.VP2{
-    position: relative;
-    right: 50cm;
-}
-
-div.VP3{
-    position: relative;
-    left: 50cm;
 }
