@@ -5,33 +5,37 @@ body {
     background: linear-gradient( white 15%, rgb(46, 44, 44) 30%, rgb(26, 25, 25) 70%);
   }
   
-  /* || NAVIGATION BAR */
-  /* Add a kaki background color to the top navigation */
-  .topnav {
-    background-color: #426442;
-    overflow: auto;
-    position:sticky;
-    position: -webkit-sticky;
-    position: sticky;
-    top:0;
-    width: 100%; }
-  /* Style the links inside the navigation bar */
-  .topnav a {
+/* || NAVIGATION BAR */
+/* Add a kaki background color to the top navigation */
+.topnav {
+  background-color: #426442;
+  overflow: auto;
+  position:sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  width: 100%; 
+}  
+/* Style the links inside the navigation bar */
+.topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 0.75em 0.75em;
   text-decoration: none;
-  font-size: 1em; }
-  /* Change the color of links on hover */
-  .topnav a:hover {
+  font-size: 1em; 
+}
+/* Change the color of links on hover */
+.topnav a:hover {
   background-color: #ddd;
-  color: black; }
-  /* Add a color to the active/current link */
-  .topnav a.active {
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
   background-color: #1b1a1d;
-  color: white; }
-  /* Right-aligned section inside the top navigation */
+  color: white;
+}
+/* Right-aligned section inside the top navigation */
   .topnav-right { float: right; }
 
  /* || CONTAINER */
@@ -47,80 +51,65 @@ body {
     position:relative;
     padding:0%;
   }
-  /* Defines paragraph in horizontal containe with 50 vw columns */
-  .p_container50 {
-    margin: 5%;
-    margin-top: 0%;
-    margin-bottom: 2%;
-    padding:0;
-    width: 45vw; }
-  .img_container50 { /*image width*/
-    margin:0%;
-    width: 48vw;
-    aspect-ratio: 16/9; }
+/* Defines paragraph in horizontal containe with 50 vw columns */
+.p_container50 {
+  margin: 5%;
+  margin-top: 0%;
+  margin-bottom: 2%;
+  padding:0;
+  width: 45vw;
+}
+/* Defines image in horizontal containe with 50 vw columns */
+.img_container50 {
+  margin:0%;
+  width: 48vw;
+  aspect-ratio: 16/9;
+}
 
-  /* || PARTNER ||*/
+/* || PARTNER ||*/
 .partner_wrapper {
   display: grid;
   grid-template-columns: repeat(2);
-    grid-template-rows: repeat(2);
-    grid-auto-columns: 50%;
-    grid-auto-rows: min-content; }
-  .partner_txt{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row:2; }
-  .partner_h{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row:1; 
-    margin:2vw;
-    padding:1vw;
-    text-align: left;
-    font:bold;
-    border:0.4vw solid white;
-    text-transform: uppercase;
-    height:auto;
-    font-size: 1.8em; }
-  .partner_mySlides{
-    display:none;
-    height: 50vh; /*image width*/
-    margin:0%;
-    margin-right: auto;
-    margin-left:auto;
-    margin-top:-50vh;
-    position:absolute;
-    left:12vw;
-    right:12vw;
-    float:center;}
-  .partner_mySlides_background{
-    display:none;
-    height: 50vh; /*image width*/
-    object-fit: cover;
-    width:100%;
-    margin:0%;
-    margin-left: auto;
-    margin-right: auto;
-    float:center;
-    filter:blur(10px);}
-  .mySlides {
-    display:none;
-    object-fit: cover;
-    height: 100%; /*image width*/
-    width: 48vw;
-    margin:0%;
-    float:right; }
+  grid-template-rows: repeat(2);
+  grid-auto-columns: 50%;
+  grid-auto-rows: min-content; 
+}
+.partner_mySlides{
+  display:none;
+  height: 50vh; /*image width*/
+  margin:0%;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top:-50vh;
+  position:absolute;
+  left:12vw;
+  right:12vw;
+  float:center;
+}
+.partner_mySlides_background{
+  display:none;
+  height: 50vh; /*image width*/
+  object-fit: cover;
+  width:100%;
+  margin:0%;
+  margin-left: auto;
+  margin-right: auto;
+  float:center;
+  filter:blur(10px);
+}
 
 /* || ABOUT US */
 .aboutUs_img{
   grid-column-start:2;
   grid-column-end:3;
   grid-row-start:1;
-  grid-row-end: 3; }
+  grid-row-end: 3; 
+}
 .aboutUs_txt{
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row:2; }
+  grid-row:2; 
+}
 .aboutUs_h{
   grid-column-start: 1;
   grid-column-end: 2;
@@ -134,18 +123,29 @@ body {
   border:0.4vw solid white;
   text-transform: uppercase;
   height:min-content;
-  font-size: 1.8em; }
+  font-size: 1.8em; 
+}
+.mySlides {
+  display:none;
+  object-fit: cover;
+  height: 100%; /*image width*/
+  width: 48vw;
+  margin:0%;
+  float:right; 
+}
 
 /* ||LE CARTEL UNE INSTITUTION */
 .cartel_img{
   grid-column-start:1;
   grid-column-end:2;
   grid-row-start:1;
-  grid-row-end: 3;}
+  grid-row-end: 3;
+}
 .cartel_txt{
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row:2; }
+  grid-row:2; 
+}
 .cartel_h{
   grid-column-start: 2;
   grid-column-end: 3;
@@ -159,8 +159,8 @@ body {
   border:0.4vw solid white;
   text-transform: uppercase;
   height:min-content;
-  font-size: 1.8em; }
-
+  font-size: 1.8em; 
+}
 
 /* || FOOTER */
 footer.footer {
