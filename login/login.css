@@ -36,6 +36,15 @@ color: white; }
 .topnav-right { float: right; }
 
 /* || LOGIN */
+.container {
+  margin:2.5vw;
+  margin-right: 7.5vw;
+  margin-left:7.5vw;
+  padding: 1.5vw;
+  background-color:rgb(26, 25, 25);
+  color: white;
+}
+/*Cases to fill */
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -43,7 +52,8 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box; }
-
+/* || LOGIN || BUTTON */
+/* Button to login */
 button {
   background-color: #426442;
   color: white;
@@ -53,42 +63,18 @@ button {
   cursor: pointer;
   width: 100%;
 }
-
 button:hover {
   opacity: 0.8;
 }
-
-.imgcontainer {
+/* || LOGIN || AVATAR */
+.img_container {
   text-align: center;
   margin: 24px 0 12px 0;
 }
-
 img.avatar {
   width: 15vw;
   border-radius: 50%;
   background-color:white;
-}
-
-.container {
-  margin:2.5vw;
-  margin-right: 7.5vw;
-  margin-left:7.5vw;
-  padding: 1.5vw;
-  background-color:rgb(26, 25, 25);
-  color: white;
-}
-
-span.psw {
-  float: right;
-  padding-top: 1.5vw;
-}
-
-/* * Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
 }
 
 /* || PIED DE PAGE */
