@@ -39,9 +39,7 @@ ul{ text-align: center; }
   color: white;
 }
 /* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
-}
+.topnav-right { float: right; }
 
 
 
@@ -79,6 +77,7 @@ img{
   margin-top: 20px;
 }
 
+/* Defines container */
 .container{
   margin-bottom: 20px;
   margin-right: 1%;
@@ -121,6 +120,7 @@ img{
   text-align: center;
 }
 
+/* || DESCRIPTION */
 .description_wrapper {
   display: grid;
   grid-template-columns: repeat(2);
@@ -133,6 +133,7 @@ img{
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row:1; }
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -290,25 +291,26 @@ img{
   height:auto;
   font-size: 1.8em; }
 
-  .planning_wrapper {
+
+.planning_wrapper {
     display: grid;
     grid-template-columns: repeat(2);
     grid-template-rows: repeat(2);
     grid-auto-columns: 50%;
     grid-auto-rows: min-content; }
-  .planning_img{
-    grid-column-start:1;
-    grid-column-end:2;
-    grid-row-start:1;
-    grid-row-end: 3;
-    margin-top:2vw; }
-  .planning_txt{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row:2; }
-  .planning_h{
-    grid-column-start: 2;
-    grid-column-end: 3;
+.planning_img{
+  grid-column-start:1;
+  grid-column-end:2;
+  grid-row-start:1;
+  grid-row-end: 3;
+  margin-top:2vw; }
+.planning_txt{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row:2; }
+.planning_h{
+  grid-column-start: 2;
+  grid-column-end: 3;
     grid-row:1; 
     margin:2vw;
     padding:1vw;
@@ -325,6 +327,7 @@ img{
   margin:0%;
   float:right;}
 
+/* || FOOTER */
 footer.footer {
   padding-top: 0.15vw;
   padding-bottom: 0.15vw;

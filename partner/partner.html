@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
+
+<head>
+  <title>
+    Cartel</title>
+  <link href="partner.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../ressources/CARTEL_Logo.png">
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
 <body>
 
-<div class="w3-container">
-  <h2>Slideshow Caption</h2>
-  <p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle).</p>
-</div>
-
-<div class="w3-content w3-display-container">
-
-<div class="w3-display-container mySlides">
-  <img src="ressources/partners/ic_logo_pumpkin.png" style="width:100%">
-  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-    French Alps
+  <div class="topnav">
+    <a href="../index/index.html">Accueil</a>
+    <a href="../map/map.html">Carte</a>
+    <a href="../school/school.html">Ecoles</a>
+    <a class="active" href="../partner/partner.html">Partenaires</a>
+    <a href="../planning/planning.html">Planning</a>
+    <a href="../sport/sports.html">Sports</a>
+    <div class="topnav-right">
+      <a href="../login/login.html">Connexion</a>
+    </div>
   </div>
-</div>
 
-<div class="w3-display-container mySlides">
-  <img src="ressources/partners/ic_partner_alma.png" style="width:100%">
-  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-    Northern Lights
+  <div class="container">
+    <img class="partner_mySlides_background" src="../ressources/partners/ic_logo_pumpkin.png">
+    <img class="partner_mySlides_background" src="../ressources/partners/ic_partner_bnp.png">
+    <img class="partner_mySlides_background" src="../ressources/partners/ic_partner_emse.png">
+    <img class="partner_mySlides" src="../ressources/partners/ic_logo_pumpkin.png">
+    <img class="partner_mySlides" src="../ressources/partners/ic_partner_bnp.png">
+    <img class="partner_mySlides" src="../ressources/partners/ic_partner_emse.png">
   </div>
-</div>
-
-<div class="w3-display-container mySlides">
-  <img src="img_mountains.jpg" style="width:100%">
-  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-    Beautiful Mountains
+  <div class="container">
+    <div class="partner_wrapper">
+      <div class="aboutUs_txt">
+        <div class="p_container50">
+          Créée en 1816, l'<strong>École des Mines de Saint‐Étienne</strong> fait
+          partie des plus anciennes écoles d’ingénieurs de France. Forte d’un réseau
+           Alumni de plus de 6000 ingénieurs, l’école rayonne en France et à l'international
+           notamment grâce à ses 5 laboratoires de recherche. Elle forme des étudiants ingénieurs
+           et délivre le diplôme d’Ingénieur civil des Mines (ICM), diplôme d’ingénieur généraliste.
+        </div>
+      </div>
+      <div class="aboutUs_img">
+        <div class="img_container50">
+        <img class="mySlides" src="../ressources/partners/ecole_icm.jpg">
+        <img class="mySlides" src="../ressources/partners/ecole_emse.jpg">
+      </div>
+    </div>
+    <div class="aboutUs_h">L'école des mines de Saint-étienne</div>
+    </div>
   </div>
-</div>
 
-<div class="w3-display-container mySlides">
-  <img src="img_forest.jpg" style="width:100%">
-  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
-    The Rain Forest
+  <div class="container">
+    <div class="partner_wrapper">
+      <div class="cartel_txt">
+        <div class="p_container50">
+        Le <strong>Cartel des Mines</strong> est un évènement sportif annuel de trois jours créé en 1962 à l'initiative 
+        de l'École des mines de Paris regroupant des équipes de toutes les Écoles des Mines d'Europe 
+        (Paris, Douai, Nantes, Alès, Albi, Saint-Étienne, Nancy, Madrid, Vigo, Oviedo, Turin, Bochum, Cracovie, 
+        Saint-Pétersbourg) dans une des écoles afin que celles-ci s'affrontent dans différentes disciplines 
+        sportives. Chaque année, cet événement a lieu durant <strong>4 jours</strong> lors du mois d'avril ou de mai et réuni près de 2 000 étudiants.
+        </div>
+      </div>
+      <div class="cartel_img">
+        <div class="img_container50">
+          <img src="../ressources/partners/ecole_imt.jpg" style="object-fit: cover; height: 100%; width: 48vw; margin:0%; float:right;s">
+        </div>
+      </div>
+    <div class="cartel_h">Le cartel une institution ...</div>
+    </div>
   </div>
-</div>
 
-<div class="w3-display-container mySlides">
-  <img src="img_mountains.jpg" style="width:100%">
-  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-    Mountains!
-  </div>
-</div>
 
-<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
-
-</div>
-
-<div id="arrow-left" class="arrow"></div>
-<div class="slide slide1"></div>
-<div class="slide slide2"></div>
-<div class="slide slide3"></div>
-<div id="arrow-right" class="arrow"></div>
+  <footer class="footer">
+    <div class="footerContainer">
+        <p>© 2021 - CARTEL DES MINES DE SAINT-ÉTIENNE, ASSOCIATION LOI 1901 - TOUS DROITS RÉSERVÉS</p>
+    </div>
+  </footer>
 
 <script src = "partner.js"></script>
 
