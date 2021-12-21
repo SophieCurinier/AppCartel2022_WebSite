@@ -5,17 +5,17 @@ body {
     background: linear-gradient( white 15%, rgb(46, 44, 44) 30%, rgb(26, 25, 25) 70%);
   }
   
-/* || NAVIGATION BAR */
+/* || NAV BAR */
 /* Add a kaki background color to the top navigation */
 .topnav {
   background-color: #426442;
   overflow: auto;
   position:sticky;
   position: -webkit-sticky;
-  position: sticky;
   top:0;
-  width: 100%; 
-}  
+  width: 100%;
+  z-index: 1;
+}
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
@@ -23,7 +23,7 @@ body {
   text-align: center;
   padding: 0.75em 0.75em;
   text-decoration: none;
-  font-size: 1em; 
+  font-size: 1em;
 }
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -36,21 +36,21 @@ body {
   color: white;
 }
 /* Right-aligned section inside the top navigation */
-  .topnav-right { float: right; }
+.topnav-right { float: right; }
 
  /* || CONTAINER */
  /* Defines container */
 .container{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-right: 1%;
-    margin-left: 1%;
-    overflow:auto;
-    background-color: #1b1a1d;
-    color:white;
-    position:relative;
-    padding:0%;
-  }
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 1%;
+  margin-left: 1%;
+  overflow:auto;
+  background-color: #1b1a1d;
+  color:white;
+  position:static;
+  padding:0%;
+}
 /* Defines paragraph in horizontal containe with 50 vw columns */
 .p_container50 {
   margin: 5%;
