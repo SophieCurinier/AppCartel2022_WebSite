@@ -33,17 +33,14 @@ color: white; }
 /* Right-aligned section inside the top navigation */
 .topnav-right { float: right; }
 
+/* || SCHOOL'S LIST */
 ul{
     text-align: center;
 }
-
 li{
-
     background-color: #426442;
-
     display: inline-block;
 }
-
 li a{
     float: left;
     color: #f2f2f2;
@@ -52,56 +49,42 @@ li a{
     text-decoration: none;
     font-size: 17px;
 }
-
 li a:hover {
     background-color: #ddd;
     color: black;
   }
-
 li a.active{
-
     background-color:#3A393E;
     color: white;
 }
 
-img{
-  max-width: 100vh;
-  max-height: 100vw;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-
-}
-
+/* || TABLE */
+/* Defines general style of table */
 .styled-table {
   border-collapse: collapse;
   margin: auto;
+  margin-bottom: 2em;
   font-size: 0.9em;
-  font-family: sans-serif;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-
+/* Defines head of table */
 .styled-table thead tr {
   background-color: #426442;
   color: #ffffff;
   text-align: center;
 }
-
+/* Defines padding in cells*/
 .styled-table th,
 .styled-table td {
-  padding: 12px 15px;
+  padding: 1vw 1vw;
 }
-
 .styled-table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
-
 .styled-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
-
 .styled-table tbody tr:last-of-type {
   border-bottom: 2px solid #426442;
 }
