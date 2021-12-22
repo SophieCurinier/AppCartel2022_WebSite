@@ -23,7 +23,8 @@
         <a href="../partner/partner.html">Partenaires</a>
         <a href="../planning/planning.html">Planning</a>
         <a href="../sport/sports.html">Sports</a>
-        <a class="active" href="../edit_match/edit_match.html">Edition des scores</a>
+        <a href="../edit_match/edit_match.html">Edition des scores</a>
+        <a class="active" href="../edit_match/create_match.html">Création de match</a>
         <div class="topnav-right">
             <a href="../login/login.html">Connexion</a>
         </div>
@@ -53,8 +54,6 @@
                         <td>{{ match.score_1 }} - {{match.score_2}}</td>
                         <td>{{ match.team2 }}</td>
                         <td>{{ match.sport }}</td>
-                        <td><a href="#" @click="getMatchInfo(match.id)"><img src="../ressources/edit_icon.ico"
-                                    width="30" height="30"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -62,18 +61,33 @@
             <table id="edit_table" class="styled-table">
                 <thead>
                     <tr>
-                        <th colspan="2">Score à modifier</th>
+                        <th colspan="2">Match à créer</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ matchInfo.date }}</td>
-                        <td>{{ matchInfo.team1 }}</td>
-                        <td><input type="number" v-model="vscore1" placeholder="matchInfo.score_1" size="1"> - <input type="number" v-model="vscore2" placeholder="matchInfo.score_2" size="1"></td>
-                        <td>{{ matchInfo.team2 }}</td>
-                        <td>{{ matchInfo.sport }}</td>
-                        <td><a href="#" @click="editMatchScore(matchInfo.id,vscore1,vscore2)"><img src="../ressources/publish_icon.ico"
-                            width="30" height="30"></a></td>
+                        <td><input type="datetime-local" v-model="vdate"></td>
+                        <td>
+                            <select v-model="vteam1">
+                                <option v-for="team in teams" v-bind="vteam1">{{ team.name }}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" v-model="vscore1" placeholder="vscore1" size="1"> - <input
+                                type="number" v-model="vscore2" placeholder="vscore2" size="1">
+                        </td>
+                        <td>
+                            <select v-model="vteam2">
+                                <option v-for="team in teams" v-bind="vteam2">{{ team.name }}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select v-model="vsport">
+                                <option v-for="sport in sports" v-bind="vsport">{{ sport.name }}</option>
+                            </select>
+                        </td>
+                        <td><a href="#" @click="createMatch(vdate,vteam1,vteam2,vscore1,vscore2,vsport)"><img
+                                    src="../ressources/publish_icon.ico" width="30" height="30"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -86,10 +100,18 @@
             data: {
                 sportInfo: {
                 },
+                teams: {
+                },
+                sports: {
+                },
                 matchInfo: {
                 },
-                vscore1:0,
-                vscore2:0,
+                vdate: "2020-03-09T22:18:26.625Z",
+                vteam1: "EMSE",
+                vteam2: "ALBI",
+                vscore1: 0,
+                vscore2: 0,
+                vsport: "FOOTBALL M",
                 message: 'Hello Vue!'
             },
 
@@ -99,8 +121,22 @@
                     .get('https://cartel2022.cleverapps.io:443/api/sport')
                     .then(response => (this.message = response.data))
                 this.getSportInfo('FOOTBALL%20M')
+                this.getTeams()
+                this.getSports()
             },
             methods: {
+                getTeams() {
+                    axios
+                        .get('https://cartel2022.cleverapps.io:443/api/ecole')
+                        .then(response => (this.teams = response.data))
+                    return this.teams
+                },
+                getSports() {
+                    axios
+                        .get('https://cartel2022.cleverapps.io:443/api/sport')
+                        .then(response => (this.sports = response.data))
+                    return this.sports
+                },
                 getSportInfo(name) {
                     axios
                         .get('https://cartel2022.cleverapps.io:443/api/match/sport/' + name)
@@ -113,9 +149,9 @@
                         .then(response => (this.matchInfo = response.data))
                     return this.matchInfo
                 },
-                editMatchScore(id, score_1, score_2) {
+                createMatch(vdate, vteam1, vteam2, vscore1, vscore2, vsport) {
                     axios
-                        .put('https://cartel2022.cleverapps.io:443/api/match/' + id + "/" + score_1 + "/" + score_2)
+                        .put('https://cartel2022.cleverapps.io:443/api/match/' + vdate + "/" + vteam1 + "/" + vteam2 + "/" + vscore1 + "/" + vscore2 + "/" + vsport)
                 }
             }
         })
