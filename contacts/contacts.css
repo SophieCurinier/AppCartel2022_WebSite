@@ -71,15 +71,30 @@ li a.active{
 
 
 /*Position buttons top page*/
-button.rightButton{
+a.rightButton{
+    color: black;
+    text-decoration: none;
+    padding-top:9px;
     position: absolute;
-    left: 50px;
+    right: 30px;
 }
 
-button.leftButton{
+a.leftButton{
+    color: black;    
+    text-decoration: none;
+    padding-top:9px;
     position: absolute;
-    right: 50px;
+    left: 30px;
 }
+
+a.rightButton:hover{
+    color: #426442;
+}
+
+a.leftButton:hover{
+    color: #426442;
+}
+
 
 /*Design Infos Contacts*/
 div.numero{
@@ -123,3 +138,23 @@ p.Poste{
 p.Nom{
     font-weight: bolder;
 }
+
+
+/* || FOOTER */
+footer.footer_cartel {
+    padding-top: 0.15vw;
+    padding-bottom: 0.15vw;
+    width: 100%;
+    background-color: #426442;
+    bottom:0px;
+    text-align: center; }
+
+footer.footer_delegations {
+    padding-top: 0.15vw;
+    padding-bottom: 0.15vw;
+    width: 100%;
+    background-color: #426442;
+    bottom:0px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px; }
