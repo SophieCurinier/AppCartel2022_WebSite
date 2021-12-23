@@ -23,8 +23,7 @@
         <a href="../partner/partner.html">Partenaires</a>
         <a href="../planning/planning.html">Planning</a>
         <a href="../sport/sports.html">Sports</a>
-        <a class="active" href="../edit_match/edit_match.html">Edition des scores</a>
-        <a href="../edit_match/create_match.html">Création de match</a>
+        <a class="active" href="../match/edit_match.html">Edition des Matchs</a>
         <div class="topnav-right">
             <a href="../login/login.html">Connexion</a>
         </div>
@@ -73,7 +72,22 @@
                         <td><input type="number" v-model="vscore1" placeholder="matchInfo.score_1" size="1"> - <input type="number" v-model="vscore2" placeholder="matchInfo.score_2" size="1"></td>
                         <td>{{ matchInfo.team2 }}</td>
                         <td>{{ matchInfo.sport }}</td>
-                        <td><a href="#" @click="editMatchScore(matchInfo.id,vscore1,vscore2)"><img src="../ressources/publish_icon.ico"
+                        <td><a href="#" @click="editMatchDate(matchInfo.id,vdate)"><img src="../ressources/publish_icon.ico"
+                            width="30" height="30"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="edit_date" class="styled-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Date à modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ matchInfo.date }}</td>
+                        <td><input type="string" v-model="vdate" placeholder="matchInfo.date" size="15"></td>
+                        <td><a href="#" @click="editMatchDate(matchInfo.id,vdate)"><img src="../ressources/publish_icon.ico"
                             width="30" height="30"></a></td>
                     </tr>
                 </tbody>
@@ -91,6 +105,7 @@
                 },
                 vscore1:0,
                 vscore2:0,
+                vdate:"Nouvel horaire",
                 message: 'Hello Vue!'
             },
 
@@ -117,6 +132,10 @@
                 editMatchScore(id, score_1, score_2) {
                     axios
                         .put('https://cartel2022.cleverapps.io:443/api/match/' + id + "/" + score_1 + "/" + score_2)
+                },
+                editMatchDate(id, date) {
+                    axios
+                        .put('https://cartel2022.cleverapps.io:443/api/match/' + id + "/" + date)
                 }
             }
         })
