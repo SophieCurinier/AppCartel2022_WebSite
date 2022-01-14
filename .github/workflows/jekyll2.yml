@@ -1,0 +1,27 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date+'%Y-%m-%d')"
+    - name: Github Release
+  # You may pin to the exact commit or the version.
+  # uses: elgohr/Github-Release-Action@ed9ebd01a0c57e64e948e7f2ff59c0159e52c204
+      uses: elgohr/Github-Release-Action@v3.1
+      with:
+        release: release_${{ steps.date.outputs.date }}
