@@ -22,9 +22,9 @@ jobs:
     - name: Github Release
   # You may pin to the exact commit or the version.
   # uses: elgohr/Github-Release-Action@ed9ebd01a0c57e64e948e7f2ff59c0159e52c204
-      uses: elgohr/Github-Release-Action@v3.1
+      uses: elgohr/Github-Release-Action@ed9ebd01a0c57e64e948e7f2ff59c0159e52c204
       with:
-        release: release_${{ steps.date.outputs.date }}
+        release: commit_release
     - name: GitHub Pages
     # You may pin to the exact commit or the version.
     # uses: crazy-max/ghaction-github-pages@a117e4aa1fb4854d021546d2abdfac95be568a3a
